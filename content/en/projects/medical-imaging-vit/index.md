@@ -7,6 +7,7 @@ accent: "purple"
 status: "completed"
 tags: ["python", "pytorch", "vision-transformers", "deep-learning", "medical-ai"]
 draft: false
+math: true
 ---
 
 # Medical Image Classification with PyTorch & ViT

@@ -59,6 +59,16 @@
   /* Layout */
   --content-width: 880px;
   --article-width: 720px;
+
+    /* --- Extended accents for project cards and chips ---
+     Adding a variable here makes it usable as `accent: "name"`
+     in project front matter. These are NOT used by UI chrome
+     (nav, links, headings) — only by small bordered elements
+     that reference the variable directly. */
+  --blue:         #8fb8d9;
+  --rose:         #d48cb8;
+  --violet:       #b89cd9;
+  --lime:         #a8d98c;
 }
 
 /* ============================================================
