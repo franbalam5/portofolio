@@ -35,12 +35,12 @@ defaultContentLanguageInSubdir = false
   title = "franbalam"
 
 [languages.en.params]
-  author = "Paco"
   descriptionLines = [
     "Software developer working across backends, mobile, and low-level Linux.",
     "This is a living archive of projects I'm proud of — not a CV.",
   ]
   tagline = "Mostly between **Linux terminals**, backend code, and reactive UIs. [Projects](/projects/) · [About](/about/) · [Contact](/contact/)"
+  ogImage = "/images/og-default.png"
 
 [languages.en.params.footer]
   text = 'franbalam // built with ♥ and [Hugo](https://gohugo.io/)'
