@@ -1,0 +1,160 @@
+/* assets/css/custom.css
+ * Project-level override for the Rewired theme.
+ * Loaded last via layouts/_partials/head/css.html.
+ *
+ * Palette: cold dark base, mint (#60FBA3) as the primary accent,
+ * cyan (#8be9fd) as the secondary cool tone, slate for tertiary.
+ * No neon, no matrix, no bloom except the hero title.
+ */
+
+/* ============================================================
+   1. Palette
+   ============================================================ */
+
+:root {
+  /* Surfaces */
+  --bg-deep:      #030406;
+  --bg:           #08090d;
+  --bg-soft:      #101319;
+
+  /* Structure */
+  --line:         rgba(96, 251, 163, 0.14);
+
+  /* Text */
+  --text:         #f0f2f5;
+  --muted:        #7d8590;
+  --muted-soft:   #b4bcc6;
+
+  /* Primary accent — mint. Also hijacks the theme's "pink" slot,
+     which the theme uses for its loudest elements: titles, active
+     nav, arrows, footer links, hover states. */
+  --green:        #60FBA3;
+  --pink:         #60FBA3;
+
+  /* Secondary cool — cyan. In-prose links, tags, blockquote bars. */
+  --cyan:         #8be9fd;
+
+  /* Tertiary — slate. Demoted from the theme's violet, reads as
+     structural rather than a competing accent. */
+  --purple:       #8b94a3;
+
+  /* Warm-neutral syntax */
+  --orange:       #d9a76c;
+  --red:          #e07a7a;
+  --yellow:       #d9d98c;
+
+  /* Layout */
+  --content-width: 880px;
+  --article-width: 720px;
+}
+
+/* ============================================================
+   2. Structural overrides
+   ============================================================ */
+
+/* Kill the theme's navy radial + linear gradient. Flat cold black. */
+body {
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kill the scanline overlay */
+body::before {
+  display: none;
+}
+
+/* ============================================================
+   3. Glow policy
+   ============================================================
+   The theme adds pink/cyan text-shadow glows across titles, hovers,
+   and arrows. We remove all of them except one deliberate exception:
+   the hero title. Selector specificity handles it — no !important. */
+
+body *:not(.home-hero__title) {
+  text-shadow: none;
+}
+
+/* The active-nav underline uses a colored box-shadow instead */
+.topbar__link.is-active::after,
+.topbar__lang-link.is-active::after {
+  box-shadow: none;
+}
+
+/* The single exception */
+.home-hero__title {
+  text-shadow: 0 0 28px rgba(96, 251, 163, 0.30);
+}
+
+/* ============================================================
+   4. Link treatment
+   ============================================================ */
+
+main a:not(.topbar__link):not(.topbar__lang-link) {
+  text-decoration: underline;
+  text-decoration-color: rgba(96, 251, 163, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 120ms ease;
+}
+
+main a:not(.topbar__link):not(.topbar__lang-link):hover {
+  text-decoration-color: var(--green);
+}
+
+/* ============================================================
+   5. Retarget hardcoded theme colors
+   ============================================================
+   The theme hardcodes pink/purple rgba values in several rules that
+   ignore the CSS variables. Retarget them to mint (hovers) or cyan
+   (filter chips). */
+
+/* Pink hover borders → mint */
+.blog-card:hover,
+.term-card:hover,
+.next-post:hover {
+  border-color: rgba(96, 251, 163, 0.42);
+}
+
+.blog-pagination__button:hover,
+.blog-pagination__button.is-active,
+.blog-tag-cloud__tag:hover,
+.terms__link:hover {
+  border-color: rgba(96, 251, 163, 0.62);
+}
+
+/* Purple filter chips → cyan */
+.blog-filter,
+.blog-tax-button,
+.projects-filter {
+  border-color: rgba(139, 233, 253, 0.45);
+  color: var(--cyan);
+  background: rgba(139, 233, 253, 0.035);
+}
+
+/* ============================================================
+   6. Typography
+   ============================================================ */
+
+h1, h2, h3 {
+  letter-spacing: -0.015em;
+}
+
+/* ============================================================
+   7. Micro-interactions
+   ============================================================ */
+
+::selection {
+  background: rgba(96, 251, 163, 0.28);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+* {
+  scrollbar-color: var(--bg-soft) var(--bg);
+  scrollbar-width: thin;
+}

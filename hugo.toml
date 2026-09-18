@@ -1,0 +1,91 @@
+baseURL = "https://franbalam.pages.dev/"
+title = "franbalam"
+theme = "rewired"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  blogPageSize = 5
+
+[params.toc]
+  enabled = true
+  ordered = false
+  startLevel = 1
+  endLevel = 3
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[languages]
+
+[languages.en]
+  label = "English"
+  locale = "en-US"
+  weight = 1
+  contentDir = "content/en"
+  title = "franbalam"
+
+[languages.en.params]
+  author = "Paco"
+  descriptionLines = [
+    "Software developer working across backends, mobile, and low-level Linux.",
+    "This is a living archive of projects I'm proud of — not a CV.",
+  ]
+  tagline = "Mostly between **Linux terminals**, backend code, and reactive UIs. [Projects](/projects/) · [About](/about/) · [Contact](/contact/)"
+
+[languages.en.params.footer]
+  text = 'franbalam // built with ♥ and [Hugo](https://gohugo.io/)'
+  prompt = "franbalam@arch:~$"
+
+[[languages.en.menus.main]]
+  name = "home"
+  pageRef = "/"
+  weight = 10
+
+[[languages.en.menus.main]]
+  name = "projects"
+  pageRef = "/projects"
+  weight = 20
+
+[[languages.en.menus.main]]
+  name = "about"
+  pageRef = "/about"
+  weight = 30
+
+[[languages.en.menus.main]]
+  name = "contact"
+  pageRef = "/contact"
+  weight = 40
+
+[[languages.en.params.social]]
+  name = "GitHub"
+  url = "https://github.com/franbalam5"
+  icon = "fa-brands fa-github"
+
+[[languages.en.params.social]]
+  name = "Email"
+  url = "mailto:franbalam5@gmail.com"
+  icon = "fa-solid fa-envelope"
+
+[[languages.en.params.subnodes]]
+  name = "github.com/franbalam5"
+  url = "https://github.com/franbalam5"
+  description = "Code and projects"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
