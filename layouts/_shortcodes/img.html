@@ -1,0 +1,28 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+
+{{- with .Page.Resources.GetMatch $src -}}
+  {{- $small := .Resize "640x webp q82" -}}
+  {{- $medium := .Resize "1024x webp q82" -}}
+  {{- $large := .Resize "1600x webp q82" -}}
+
+  <figure class="content-figure">
+    <img
+      src="{{ $medium.RelPermalink }}"
+      srcset="{{ $small.RelPermalink }} 640w,
+              {{ $medium.RelPermalink }} 1024w,
+              {{ $large.RelPermalink }} 1600w"
+      sizes="(max-width: 780px) calc(100vw - 2rem), 720px"
+      alt="{{ $alt }}"
+      loading="lazy"
+      decoding="async"
+      width="{{ $medium.Width }}"
+      height="{{ $medium.Height }}">
+    {{- with $caption -}}
+      <figcaption>{{ . }}</figcaption>
+    {{- end -}}
+  </figure>
+{{- else -}}
+  {{- warnf "img shortcode: %q not found in %s" $src .Page.File.Path -}}
+{{- end -}}

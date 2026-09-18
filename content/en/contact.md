@@ -7,7 +7,7 @@ description: "How to reach me."
 
 If you want to discuss a project I could collaborate on, chat about tech, Linux, or just trade perspectives, the best way to reach me is by email:
 
-### 📬 Primary contact
+### Primary contact
 
 - **Email:** [franbalam5@gmail.com](mailto:franbalam5@gmail.com)
 

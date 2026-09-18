@@ -12,11 +12,12 @@
  *   3. Glow policy
  *   4. Link treatment
  *   5. Retargeted theme colors
- *   6. Typography
+ *   6. Typography & layout
  *   7. Micro-interactions
  *   8. Fonts (@font-face + family assignments)
  *   9. Homepage hero — Botas ghost
  *  10. 404 — terminal error block
+ *  11. Mermaid diagrams
  */
 
 /* ============================================================
@@ -145,7 +146,7 @@ main a:not(.topbar__link):not(.topbar__lang-link):hover {
 }
 
 /* ============================================================
-   6. Typography
+   6. Typography & layout
    ============================================================ */
 
 h1, h2, h3 {
@@ -158,6 +159,31 @@ h1, h2, h3 {
   margin-inline: auto;
   max-width: 60ch;
   height: auto;
+}
+
+/* Figures from the img shortcode fill the article width */
+.page__content figure img {
+  max-width: 100%;
+}
+
+/* Center the article containers within the shell */
+.page,
+.blog-page,
+.projects-page,
+.generic-section,
+.taxonomy-page,
+.term-page {
+  margin-inline: auto;
+}
+
+/* Mint cursor on all section-style title headings */
+.page__title .cursor,
+.projects-title .cursor,
+.blog-title .cursor,
+.taxonomy-title .cursor,
+.term-title .cursor,
+.generic-section__title .cursor {
+  color: var(--green);
 }
 
 /* ============================================================
@@ -310,4 +336,22 @@ html, body {
   color: var(--muted-soft);
   background: transparent;
   padding: 0;
+}
+
+/* ============================================================
+   11. Mermaid diagrams
+   ============================================================ */
+
+.mermaid {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: var(--bg-deep);
+  overflow-x: auto;
+  text-align: center;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
 }

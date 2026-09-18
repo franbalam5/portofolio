@@ -1,6 +1,8 @@
 {{ define "main" }}
 
 {{ $isPost := eq .Section "posts" }}
+{{ $isProject := eq .Section "projects" }}
+{{ $isPlainTitle := or $isPost $isProject }}
 {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
 {{ $dateHuman := .Date | time.Format "2006-01-02" }}
 {{ $postsPage := site.GetPage "/posts" }}
@@ -18,7 +20,13 @@
 	{{ end }}
 
 	<header class="page__header">
-		<h1 class="page__title">{{ .Title }}</h1>
+		<h1 class="page__title">
+			{{- if $isPlainTitle -}}
+				{{ .Title }}
+			{{- else -}}
+				/{{ .Title | lower }}<span class="cursor" aria-hidden="true">_</span>
+			{{- end -}}
+		</h1>
 
 		{{ if $isPost }}
 			<div class="page__meta">

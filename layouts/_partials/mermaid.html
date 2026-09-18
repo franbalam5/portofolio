@@ -1,0 +1,22 @@
+{{/* Renders after content, so .Store.Get "hasMermaid" is reliable.
+     Only loads Mermaid's JS on pages that actually contain a diagram. */}}
+{{ if .Store.Get "hasMermaid" }}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      background: '#08090d',
+      primaryColor: '#101319',
+      primaryTextColor: '#f0f2f5',
+      primaryBorderColor: '#60FBA3',
+      lineColor: '#60FBA3',
+      secondaryColor: '#101319',
+      tertiaryColor: '#030406',
+      fontFamily: 'Commit Mono, monospace',
+      fontSize: '14px'
+    }
+  });
+</script>
+{{ end }}

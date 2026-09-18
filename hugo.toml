@@ -36,15 +36,15 @@ defaultContentLanguageInSubdir = false
 
 [languages.en.params]
   descriptionLines = [
-    "Software developer working across backends, mobile, and low-level Linux.",
-    "This is a living archive of projects I'm proud of — not a CV.",
+    "Software developer currently working across backends, mobile, and low-level Linux.",
+    "This is a living archive of projects I'm proud of and things I like, not a CV.",
   ]
-  tagline = "Mostly between **Linux terminals**, backend code, and reactive UIs. [Projects](/projects/) · [About](/about/) · [Contact](/contact/)"
+  tagline = "Backend code, reactive UIs, ML Projects, Mobile projects. I've just got a thing for learning. [Projects](/projects/) · [About](/about/) · [Contact](/contact/)"
   ogImage = "/images/og-default.png"
 
 [languages.en.params.footer]
   text = 'franbalam // built with ♥ and [Hugo](https://gohugo.io/)'
-  prompt = "franbalam@arch:~$"
+  prompt = "l(a le af fa ll s) one l iness "
 
 [[languages.en.menus.main]]
   name = "home"
@@ -55,6 +55,11 @@ defaultContentLanguageInSubdir = false
   name = "projects"
   pageRef = "/projects"
   weight = 20
+
+[[languages.en.menus.main]]
+  name = "posts"
+  pageRef = "/posts"
+  weight = 25
 
 [[languages.en.menus.main]]
   name = "about"

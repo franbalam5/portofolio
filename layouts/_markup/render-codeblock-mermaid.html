@@ -1,0 +1,3 @@
+<!-- layouts/_markup/render-codeblock-mermaid.html -->
+<pre class="mermaid">{{ .Inner | htmlEscape | safeHTML }}</pre>
+{{ .Page.Store.Set "hasMermaid" true }}
