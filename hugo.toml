@@ -39,7 +39,7 @@ defaultContentLanguageInSubdir = false
     "Software developer currently working across backends, mobile, and low-level Linux.",
     "This is a living archive of projects I'm proud of and things I like, not a CV.",
   ]
-  tagline = "Backend code, reactive UIs, ML Projects, Mobile projects. I've just got a thing for learning. [Projects](/projects/) · [About](/about/) · [Contact](/contact/)"
+  tagline = "Mostly between **Linux terminals**, backend code, and reactive UIs. Currently deep in low-level Linux tooling and a couple of Android projects."
   ogImage = "/images/og-default.png"
 
 [languages.en.params.footer]

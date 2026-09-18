@@ -101,9 +101,18 @@ body *:not(.home-hero__title) {
 
 /* ============================================================
    4. Link treatment
-   ============================================================ */
+   ============================================================
+   Underlines in prose and homepage rows — where they aid
+   readability and communicate row-level interactivity. Cards
+   (projects, blog, terms) omit them: they have borders and
+   arrows doing that job, and underlining their multi-line
+   descriptions creates a zebra-stripe effect. */
 
-main a:not(.topbar__link):not(.topbar__lang-link) {
+.page__content a,
+.generic-section__content a,
+.node-row,
+.post-row,
+.project-row {
   text-decoration: underline;
   text-decoration-color: rgba(96, 251, 163, 0.35);
   text-decoration-thickness: 1px;
@@ -111,7 +120,11 @@ main a:not(.topbar__link):not(.topbar__lang-link) {
   transition: text-decoration-color 120ms ease;
 }
 
-main a:not(.topbar__link):not(.topbar__lang-link):hover {
+.page__content a:hover,
+.generic-section__content a:hover,
+.node-row:hover,
+.post-row:hover,
+.project-row:hover {
   text-decoration-color: var(--green);
 }
 
@@ -151,6 +164,14 @@ main a:not(.topbar__link):not(.topbar__lang-link):hover {
 
 h1, h2, h3 {
   letter-spacing: -0.015em;
+}
+
+/* Small-size Archivo needs more negative tracking than display —
+   what reads well at 3rem feels loose at 1.15rem. Article h2s and
+   h3s are the mid-size range. */
+.page__content h2,
+.page__content h3 {
+  letter-spacing: -0.05em;
 }
 
 /* Constrain and center content images */
@@ -285,7 +306,7 @@ h2,
   font-family: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 900;
   font-style: normal;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 /* ============================================================
