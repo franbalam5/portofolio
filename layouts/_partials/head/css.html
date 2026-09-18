@@ -17,11 +17,6 @@
 	{{- $styles = $styles | append . -}}
 {{- end -}}
 
-{{/* Project override: appended last so our :root wins the cascade */}}
-{{- with resources.Get "css/custom.css" -}}
-	{{- $styles = $styles | append . -}}
-{{- end -}}
-
 {{- $css := $styles | resources.Concat "css/rewired.css" -}}
 
 {{- if hugo.IsDevelopment -}}
@@ -30,4 +25,10 @@
 {{- else -}}
 	{{- $css = $css | css.Build (dict "minify" true "sourceMap" "none") | fingerprint -}}
 	<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- end -}}
+
+{{/* Project override: separate link, untouched by css.Build so url() refs stay intact */}}
+{{- with resources.Get "css/custom.css" -}}
+	{{- $custom := . | minify | fingerprint -}}
+	<link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}" crossorigin="anonymous">
 {{- end -}}

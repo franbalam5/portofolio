@@ -5,6 +5,17 @@
  * Palette: cold dark base, mint (#60FBA3) as the primary accent,
  * cyan (#8be9fd) as the secondary cool tone, slate for tertiary.
  * No neon, no matrix, no bloom except the hero title.
+ *
+ * Order:
+ *   1. Palette
+ *   2. Structural overrides
+ *   3. Glow policy
+ *   4. Link treatment
+ *   5. Retargeted theme colors
+ *   6. Typography
+ *   7. Micro-interactions
+ *   8. Fonts (@font-face + family assignments)
+ *   9. About page — Botas ghost
  */
 
 /* ============================================================
@@ -140,6 +151,14 @@ h1, h2, h3 {
   letter-spacing: -0.015em;
 }
 
+/* Constrain and center content images */
+.page__content img {
+  display: block;
+  margin-inline: auto;
+  max-width: 60ch;
+  height: auto;
+}
+
 /* ============================================================
    7. Micro-interactions
    ============================================================ */
@@ -157,4 +176,101 @@ h1, h2, h3 {
 * {
   scrollbar-color: var(--bg-soft) var(--bg);
   scrollbar-width: thin;
+}
+
+/* ============================================================
+   8. Fonts
+   ============================================================
+   Commit Mono — self-hosted, monospace body + UI.
+   Archivo — Google Fonts, headings only. */
+
+@font-face {
+  font-family: "Commit Mono";
+  src: url("/fonts/commit-mono/CommitMono-400-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Commit Mono";
+  src: url("/fonts/commit-mono/CommitMono-400-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Commit Mono";
+  src: url("/fonts/commit-mono/CommitMono-700-Regular.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Commit Mono";
+  src: url("/fonts/commit-mono/CommitMono-700-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Body and UI — Commit Mono replaces Fira Code */
+body,
+button,
+input,
+select,
+textarea,
+code,
+pre,
+kbd,
+samp {
+  font-family: "Commit Mono", "Fira Code", ui-monospace, monospace;
+}
+
+/* Headings — Archivo for the editorial/lyric-video punch */
+h1,
+h2,
+.home-hero__title,
+.page__title,
+.blog-title,
+.projects-title,
+.taxonomy-title,
+.term-title,
+.generic-section__title {
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: -0.03em;
+}
+
+/* ============================================================
+   9. Homepage hero — Botas ghost
+   ============================================================
+   Positioned to the right of the hero block, aligned with the
+   title row. backdrop-blur off, pointer-events off, z-index -1. */
+
+.home-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  bottom: -80%;
+  left: 45%;
+  right: calc(-50vw + 50% - 40px);
+  background: var(--green);
+  -webkit-mask: url("/images/botas-silhouette.webp") no-repeat right center / contain;
+          mask: url("/images/botas-silhouette.webp") no-repeat right center / contain;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+
+html, body {
+  overflow-x: clip;
 }
