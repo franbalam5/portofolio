@@ -10,6 +10,7 @@
 </title>
 
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
 
 {{/* ——— Favicons ——— */}}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -38,15 +39,8 @@
   <meta name="twitter:image" content="{{ . | absURL }}">
 {{ end }}
 
-{{/* ——— External assets ——— */}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-{{/* Archivo — headings only, with italic variants */}}
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-{{/* Font Awesome — project icons */}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+{{/* ——— Font Awesome — project icons (self-hosted) ——— */}}
+<link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
 
 {{/* ——— Theme partials ——— */}}
 {{ partial "head/css.html" . }}

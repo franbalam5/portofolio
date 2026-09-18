@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<article class="page page--404">
+	<header class="page__header">
+		<h1 class="page__title">404</h1>
+		<p class="page__description">
+			Not found.
+		</p>
+	</header>
+
+	<div class="page__content">
+		<pre class="error-block"><code>~ $ ls /requested-page
+ls: cannot access '/requested-page': No such file or directory</code></pre>
+
+		<p>
+			<a href="{{ site.Home.RelPermalink }}">← back home</a>
+		</p>
+	</div>
+</article>
+
+{{ end }}

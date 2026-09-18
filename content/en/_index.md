@@ -1,6 +1,6 @@
 ---
 title: "Home"
-description: "Personal site and project archive of Paco (franbalam)."
+description: "Personal site and project archive of franbalam."
 ---
 
 # Hey, I'm franbalam

@@ -15,7 +15,8 @@
  *   6. Typography
  *   7. Micro-interactions
  *   8. Fonts (@font-face + family assignments)
- *   9. About page — Botas ghost
+ *   9. Homepage hero — Botas ghost
+ *  10. 404 — terminal error block
  */
 
 /* ============================================================
@@ -182,7 +183,7 @@ h1, h2, h3 {
    8. Fonts
    ============================================================
    Commit Mono — self-hosted, monospace body + UI.
-   Archivo — Google Fonts, headings only. */
+   Archivo — self-hosted, headings only (normal + italic variants). */
 
 @font-face {
   font-family: "Commit Mono";
@@ -212,6 +213,22 @@ h1, h2, h3 {
   font-family: "Commit Mono";
   src: url("/fonts/commit-mono/CommitMono-700-Italic.woff2") format("woff2");
   font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/archivo/Archivo-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/archivo/Archivo-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
@@ -273,4 +290,24 @@ h2,
 
 html, body {
   overflow-x: clip;
+}
+
+/* ============================================================
+   10. 404 — terminal error block
+   ============================================================ */
+
+.error-block {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--line);
+  background: var(--bg-deep);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow-x: auto;
+}
+
+.error-block code {
+  color: var(--muted-soft);
+  background: transparent;
+  padding: 0;
 }
