@@ -5,7 +5,7 @@ description: "How to reach me."
 
 # Let's talk ✉️
 
-If you want to discuss a project I could collaborate on, chat about tech, Linux, or just trade perspectives, the best way to reach me is by email:
+If you want to discuss a project I could collaborate on, chat about tech, or just trade perspectives, the best way (and only way) to reach me is by mail:
 
 ### Primary contact
 

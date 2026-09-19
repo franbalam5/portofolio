@@ -1,6 +1,6 @@
 ---
 title: "Chest X-Ray Classification with Vision Transformers"
-date: 2024-05-18
+date: 2026-05-11
 description: "PyTorch deep learning pipeline for lung pathology detection using ViT and ResNet architectures."
 icon: "fa-solid fa-x-ray"
 accent: "purple"

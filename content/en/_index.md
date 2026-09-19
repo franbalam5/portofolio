@@ -7,7 +7,7 @@ description: "Personal site and project archive of franbalam."
 
 I like building software that's functional, well-considered, and free of unnecessary layers, whenever I can actually manage doing that. This space isn't a traditional CV or a corporate list of achievements, it's more of a personal calling card and an archive of projects and experiments I'm actually proud of.
 
-Most of my time goes into learning new technologies (I'm particularly interested in ML Algorithms), but I mostly do things on **Linux terminals**, backend and low-level code, reactive UIs, and one or two mobile apps from time to time.
+Most of my time goes into learning new technologies (I'm particularly interested in ML Algorithms), but I mostly do a mix of many things: **Linux terminals**, backend and low-level code, reactive UIs, and one or two mobile apps from time to time.
 
 ---
 

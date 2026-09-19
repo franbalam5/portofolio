@@ -18,7 +18,7 @@ I go by **franbalam** online. I'm a software developer drawn to the intersection
 
 As I don't have and don't plan to have staged photos of me in a suit here you'll get the next best thing, my dog **Botas**.
 
-![Botas casting his judgment on to the camera.](/images/botas.jpg)
+![Botas casting his judgment on to the camera.](/images/botas-silhouette.webp)
 *Tus ojos, que tú no ves, Platero, y que alzas mansamente al cielo, son dos bellas rosas. - Juan Ramón Jiménez*
 
 Botas is my dog, desk companion, and an expert in **looking at people**: when a bug makes no sense or a C function refuses to free memory, explaining it to Botas tends to reveal the fix in under five minutes.

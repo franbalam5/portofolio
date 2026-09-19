@@ -1,6 +1,6 @@
 ---
 title: "CEDIVIPA: Modernization & Educational Ecosystem"
-date: 2024-11-10
+date: 2026-07-10
 description: "Architectural modernization of UNAM's oral telepathology platform and development of an interactive gamified learning ecosystem (PAPIME)."
 icon: "fa-solid fa-tooth"
 accent: "rose"
