@@ -35,6 +35,7 @@ defaultContentLanguageInSubdir = false
   title = "franbalam"
 
 [languages.en.params]
+  author = "franbalam"
   descriptionLines = [
     "Software developer currently working across backends, mobile, and low-level Linux.",
     "This is a living archive of projects I'm proud of and things I like, not a CV.",

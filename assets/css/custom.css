@@ -217,6 +217,17 @@ h1, h2, h3 {
   color: var(--green);
 }
 
+/* Constrain Botas photo so compression artifacts aren't blown up */
+.botas-photo {
+  display: block;
+  margin-inline: auto;
+  max-width: 170px;          /* Shrinks width from ~550px down to a crisp 340px */
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
 /* ============================================================
    7. Micro-interactions
    ============================================================ */
@@ -276,7 +287,7 @@ h1, h2, h3 {
 
 @font-face {
   font-family: "Archivo";
-  src: url("/fonts/archivo/Archivo-Black.ttf") format("truetype");
+  src: url("/fonts/archivo/Archivo-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -284,7 +295,7 @@ h1, h2, h3 {
 
 @font-face {
   font-family: "Archivo";
-  src: url("/fonts/archivo/Archivo-BlackItalic.ttf") format("truetype");
+  src: url("/fonts/archivo/Archivo-BlackItalic.woff2") format("woff2");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
